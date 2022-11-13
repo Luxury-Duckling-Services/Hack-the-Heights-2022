@@ -13,14 +13,14 @@ function App() {
         .then((l) => {
             setOwnerships(l)
         })
-    } , [])
+    } , [page])
 
   return (
     <>
       <TopNavBar page={page} setPage={setPage}/>
       
       {page === "current" ? <CurrentHabits ownerships={ownerships} /> : <></>}
-      {page === "new" ? <NewHabit /> : <></>}
+      {page === "new" ? <NewHabit setPage={setPage}/> : <></>}
     </>
   );
 }

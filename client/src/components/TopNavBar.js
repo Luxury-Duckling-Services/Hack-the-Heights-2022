@@ -26,7 +26,7 @@ function TopNavBar( { page , setPage }) {
                         }
                     }}>
                     <Tab label="Build Current Habits" value="current" onClick={() => setPage("current")}/>
-                    <Tab label="Form New Habit" value="new" onClick={() => setPage("new")}/>
+                    <Tab label="Form A New Habit" value="new" onClick={() => setPage("new")}/>
                 </Tabs>
             </ThemeProvider>
         </AppBar>
