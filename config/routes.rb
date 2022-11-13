@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :ownerships, only: [:index , :create]
+  resources :ownerships, only: [:index , :create , :update]
   resources :activities, only: [:index]
   resources :pokemons, only: [:index]
 

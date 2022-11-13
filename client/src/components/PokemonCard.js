@@ -1,6 +1,6 @@
-import { Card, CardContent, CardActions, CardActionArea, CardMedia, Typography, Button } from '@mui/material';
+import { Dialog , Card, CardContent, CardActions, CardActionArea, CardMedia, Typography, Button } from '@mui/material';
 
-function PokemonCard( { ownership } ) {
+function PokemonCard( { ownership , openQuestion } ) {
     
     return (
       <Card sx={{ width: 'auto', pb: 0, mr:0, mb:1 , mt:1 }}>
@@ -23,10 +23,14 @@ function PokemonCard( { ownership } ) {
         </CardActionArea>
 
         <CardActions>
-          <Button size="small" color="primary" onClick={()=>console.log(`${ownership.id} ${ownership.level}`)}>
+          <Button size="small" color="primary"
+            onClick={()=> {
+              openQuestion(ownership)
+            }}>
             Level Up
           </Button>
         </CardActions>
+
       </Card>
     );
   }

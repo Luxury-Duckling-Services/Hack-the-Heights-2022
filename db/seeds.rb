@@ -3,7 +3,6 @@ Pokemon.create(name:"Snorlax" , picture:"https://assets.pokemon.com/assets/cms2/
 Pokemon.create(name:"Abra" , picture:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png")
 Correspondence.create( pokemon_id: Pokemon.find_by(name:"Snorlax").id , activity_id: Activity.find_by(name:"sleeping early").id )
 Correspondence.create( pokemon_id: Pokemon.find_by(name:"Abra").id , activity_id: Activity.find_by(name:"sleeping early").id )
-Ownership.create( pokemon_id:Pokemon.find_by(name:"Snorlax").id , level:12 )
 
 Activity.create(name:"going outdoors")
 Pokemon.create(name:"Pikachu" , picture:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png")
