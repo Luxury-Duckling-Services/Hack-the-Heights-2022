@@ -11,10 +11,9 @@ function App() {
         fetch(`/ownerships`)
         .then((r) => r.json())
         .then((l) => {
-            console.log(l)
             setOwnerships(l)
         })
-    } , [ownerships])
+    } , [])
 
   return (
     <>
