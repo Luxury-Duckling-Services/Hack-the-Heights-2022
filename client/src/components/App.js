@@ -5,12 +5,22 @@ import CurrentHabits from "./CurrentHabits";
 
 function App() {
   const [ page , setPage ] = useState("current")
+  const [ ownerships , setOwnerships ] = useState([])
+
+    useEffect(()=> {
+        fetch(`/ownerships`)
+        .then((r) => r.json())
+        .then((l) => {
+            console.log(l)
+            setOwnerships(l)
+        })
+    } , [ownerships])
 
   return (
     <>
       <TopNavBar page={page} setPage={setPage}/>
       
-      {page === "current" ? <CurrentHabits /> : <></>}
+      {page === "current" ? <CurrentHabits ownerships={ownerships} /> : <></>}
       {page === "new" ? <NewHabit /> : <></>}
     </>
   );

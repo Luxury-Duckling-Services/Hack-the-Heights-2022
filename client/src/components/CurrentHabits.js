@@ -1,16 +1,13 @@
 import { useState, useEffect } from "react";
 import PokemonCard from "./PokemonCard";
 
-function CurrentHabits() {
-    const [ listOfCurrentHabits , setListOfCurrentHabits ] = useState([])
-
-    useEffect( () => {
-        // GET request
-    } , [listOfCurrentHabits] )
-
+function CurrentHabits( { ownerships }) {
+    
     return (
         <>
-            <PokemonCard />
+            {ownerships.map( ownership => {
+                return <PokemonCard key={ownership.id} activity={ownership.activity} pokemon={ownership.pokemon} level={ownership.level}/>
+            })}
         </>
     )
 }

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-  resources :activities
+  resources :ownerships, only: [:index]
+  resources :activities, only: [:index]
   resources :pokemons, only: [:index]
 
   # Routing logic: fallback requests for React Router.

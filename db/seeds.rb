@@ -1,20 +1,31 @@
 Activity.create(name:"sleeping early")
 Pokemon.create(name:"Snorlax" , picture:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png")
 Pokemon.create(name:"Abra" , picture:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png")
+Correspondence.create( pokemon_id: Pokemon.find_by(name:"Snorlax").id , activity_id: Activity.find_by(name:"sleeping early").id )
+Correspondence.create( pokemon_id: Pokemon.find_by(name:"Abra").id , activity_id: Activity.find_by(name:"sleeping early").id )
+Ownership.create( pokemon_id:Pokemon.find_by(name:"Snorlax").id , level:12 )
 
 Activity.create(name:"going outdoors")
 Pokemon.create(name:"Pikachu" , picture:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png")
 Pokemon.create(name:"Ponyta" , picture:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/077.png")
+Correspondence.create( pokemon_id: Pokemon.find_by(name:"Pikachu").id , activity_id: Activity.find_by(name:"going outdoors").id )
+Correspondence.create( pokemon_id: Pokemon.find_by(name:"Ponyta").id , activity_id: Activity.find_by(name:"going outdoors").id )
+Ownership.create( pokemon_id:Pokemon.find_by(name:"Pikachu").id , level:25 )
 
 Activity.create(name:"working out")
 Pokemon.create(name:"Machamp" , picture:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/068.png")
 Pokemon.create(name:"Hitmonlee" , picture:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/106.png")
+Correspondence.create( pokemon_id: Pokemon.find_by(name:"Machamp").id , activity_id: Activity.find_by(name:"working out").id )
+Correspondence.create( pokemon_id: Pokemon.find_by(name:"Hitmonlee").id , activity_id: Activity.find_by(name:"working out").id )
 
 Activity.create(name:"cooking healthy")
 Pokemon.create(name:"Kadabra" , picture:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/064.png")
 Pokemon.create(name:"Lickitung" , picture:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/108.png")
+Correspondence.create( pokemon_id: Pokemon.find_by(name:"Kadabra").id , activity_id: Activity.find_by(name:"cooking healthy").id )
+Correspondence.create( pokemon_id: Pokemon.find_by(name:"Lickitung").id , activity_id: Activity.find_by(name:"cooking healthy").id )
 
 Activity.create(name:"reading book")
 Pokemon.create(name:"Hoothoot" , picture:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/163.png")
 Pokemon.create(name:"Chinchou" , picture:"https://assets.pokemon.com/assets/cms2/img/pokedex/full/170.png")
-
+Correspondence.create( pokemon_id: Pokemon.find_by(name:"Hoothoot").id , activity_id: Activity.find_by(name:"reading book").id )
+Correspondence.create( pokemon_id: Pokemon.find_by(name:"Chinchou").id , activity_id: Activity.find_by(name:"reading book").id )
